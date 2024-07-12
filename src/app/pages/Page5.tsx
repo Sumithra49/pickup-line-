@@ -1,12 +1,15 @@
+"use client";
 import './Page3.css';
 
-const containerStyle = {
+import React from 'react';
+
+const containerStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
   fontFamily: "'Pacifico', cursive",
-  color: 'rgb(255,33,87)',
+  color: 'rgb(255, 33, 87)',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '100vh',
@@ -17,14 +20,14 @@ const containerStyle = {
   fontSize: '25px',
 };
 
-const formStyle = {
+const formStyle: React.CSSProperties = {
   padding: '20px',
   borderRadius: '10px',
   width: '100%',
   textAlign: 'center',
 };
 
-const inputStyle = {
+const inputStyle: React.CSSProperties = {
   width: '100%',
   padding: '10px',
   marginBottom: '10px',
@@ -36,11 +39,11 @@ const inputStyle = {
   color: 'pink',
 };
 
-const buttonStyle = {
+const buttonStyle: React.CSSProperties = {
   width: '100%',
   padding: '10px',
   marginTop: '10px',
-  backgroundColor: 'rgb(255,33,87)',
+  backgroundColor: 'rgb(255, 33, 87)',
   color: 'white',
   border: 'none',
   cursor: 'pointer',
@@ -63,12 +66,12 @@ const Page5: React.FC<Page5Props> = ({ onNext }) => {
             position: 'absolute',
             top: '70px',
             right: '20px',
-            color: 'rgb(185,16,57)',
+            color: 'rgb(185, 16, 57)',
             padding: '10px',
             fontSize: '25px',
             fontFamily: "'Pacifico', cursive",
             borderRadius: '20px',
-            backgroundColor: 'rgb(231,214,219)',
+            backgroundColor: 'rgb(231, 214, 219)',
             border: 'none',
             fontWeight: 'bold',
             width: '150px',
@@ -79,27 +82,27 @@ const Page5: React.FC<Page5Props> = ({ onNext }) => {
         <div style={{ marginBottom: '10px' }}>
           <p
             style={{
-              color: 'rgb(175,87,108)',
+              color: 'rgb(175, 87, 108)',
               fontWeight: '100',
               fontSize: '23px',
               marginTop: '20px',
               textAlign: 'center',
             }}
           >
-            copy the below pick up lines
+            Copy the below pickup lines
           </p>
 
           <textarea
             style={{ height: '150px', width: '500px', borderRadius: '10px', marginTop: '10px', ...inputStyle }}
-            value={`Pickup line 1\n\n write in a scholarly tone, utilising accurate,`}
-          
+            value={`Pickup line 1\n\nWrite in a scholarly tone, utilizing accurate,`}
+            readOnly
           />
         </div>
 
         <div style={{ marginBottom: '10px' }}>
-        <textarea
+          <textarea
             style={{ height: '150px', width: '500px', borderRadius: '10px', marginTop: '10px', ...inputStyle }}
-            value={`Pickup line 2\n\n write in a scholarly tone, utilising accurate,`}
+            value={`Pickup line 2\n\nWrite in a scholarly tone, utilizing accurate,`}
             readOnly
           />
         </div>

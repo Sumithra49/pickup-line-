@@ -1,15 +1,15 @@
 "use client";
-import "./Page3.css";
+import "./Page3.css"; // Ensure the correct CSS file is imported
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-const containerStyle = {
+const containerStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
   fontFamily: "'Pacifico', cursive",
-  color: 'rgb(255,33,87)',
+  color: 'rgb(255, 33, 87)',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '100vh',
@@ -20,29 +20,28 @@ const containerStyle = {
   fontSize: '25px',
 };
 
-const formStyle = {
+const formStyle: React.CSSProperties = {
   padding: '20px',
   borderRadius: '10px',
   width: '100%',
   textAlign: 'center',
 };
 
-const inputStyle = {
+const inputStyle: React.CSSProperties = {
   width: '100%',
   padding: '10px',
   marginBottom: '10px',
   boxSizing: 'border-box',
-  marginTop: '-20px',
   fontFamily: "'Pacifico', cursive",
   border: '1px solid rgba(0, 0, 0, 0.1)',
   borderRadius: '10px',
 };
 
-const buttonStyle = {
+const buttonStyle: React.CSSProperties = {
   width: '100%',
   padding: '10px',
   marginTop: '10px',
-  backgroundColor: 'rgb(255,33,87)',
+  backgroundColor: 'rgb(255, 33, 87)',
   color: 'white',
   border: 'none',
   cursor: 'pointer',
@@ -63,7 +62,7 @@ const Page4: React.FC<Page4Props> = ({ onNext }) => {
   });
 
   // Function to update form data
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -79,12 +78,12 @@ const Page4: React.FC<Page4Props> = ({ onNext }) => {
             position: 'absolute',
             top: '70px',
             right: '20px',
-            color: 'rgb(175,87,108)',
+            color: 'rgb(175, 87, 108)',
             padding: '10px',
             fontSize: '25px',
             fontFamily: "'Pacifico', cursive",
             borderRadius: '20px',
-            backgroundColor: 'rgb(231,214,219)',
+            backgroundColor: 'rgb(231, 214, 219)',
             border: 'none',
           }}
         >
@@ -93,8 +92,7 @@ const Page4: React.FC<Page4Props> = ({ onNext }) => {
         <div style={{ marginBottom: '10px' }}>
           <p
             style={{
-              color: 'rgb(175,87,108)',
-              marginLeft: '-300px',
+              color: 'rgb(175, 87, 108)',
               fontSize: '23px',
               marginTop: '20px',
             }}
@@ -112,11 +110,10 @@ const Page4: React.FC<Page4Props> = ({ onNext }) => {
         <div style={{ marginBottom: '10px' }}>
           <p
             style={{
-              color: 'rgb(175,87,108)',
-              marginLeft: '-450px',
+              color: 'rgb(175, 87, 108)',
               fontSize: '23px',
               marginTop: '-30px',
-              marginBottom:'-2px'
+              marginBottom: '-2px',
             }}
           >
             Style
@@ -124,7 +121,7 @@ const Page4: React.FC<Page4Props> = ({ onNext }) => {
           <input
             type="text"
             placeholder="e.g., funny"
-            style={inputStyle }
+            style={{ ...inputStyle }}
             name="style"
             value={formData.style}
             onChange={handleChange}
