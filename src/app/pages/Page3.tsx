@@ -50,7 +50,11 @@ const containerStyle = {
   };
   
 
-const Page3 = () => {
+  interface Page3Props {
+    onNext: () => void;
+  }
+  
+  const Page3: React.FC<Page3Props> = ({ onNext }) => {
   return (
     <div style={containerStyle}>
       <div style={formStyle}>
@@ -101,6 +105,7 @@ const Page3 = () => {
           <span className="heart">&hearts;</span> Generate for me <span className="heart">&hearts;</span>
         </button>
       </div>
+      <button onClick={onNext}>Next</button>
     </div>
   );
 };

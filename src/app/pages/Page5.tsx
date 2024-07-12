@@ -49,7 +49,11 @@ const buttonStyle = {
   fontSize: '24px',
 };
 
-const Page5 = () => {
+interface Page5Props {
+  onNext: () => void;
+}
+
+const Page5: React.FC<Page5Props> = ({ onNext }) => {
   return (
     <div style={containerStyle}>
       <div style={formStyle}>
@@ -103,6 +107,7 @@ const Page5 = () => {
           <span className="heart">&hearts;</span> Regenerate pickup line <span className="heart">&hearts;</span>
         </button>
       </div>
+      <button onClick={onNext}>Next</button>
     </div>
   );
 };

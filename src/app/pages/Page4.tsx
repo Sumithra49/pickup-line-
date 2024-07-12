@@ -51,7 +51,11 @@ const buttonStyle = {
   fontSize: '24px',
 };
 
-const Page4 = () => {
+interface Page4Props {
+  onNext: () => void;
+}
+
+const Page4: React.FC<Page4Props> = ({ onNext }) => {
   // Sample state to hold form data
   const [formData, setFormData] = useState({
     crushDescription: "She is 10 but...",
@@ -130,6 +134,7 @@ const Page4 = () => {
           <span className="heart">&hearts;</span> Generate for me <span className="heart">&hearts;</span>
         </button>
       </div>
+      <button onClick={onNext}>Next</button>
     </div>
   );
 };

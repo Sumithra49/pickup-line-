@@ -15,6 +15,7 @@ const Page1: React.FC<Page1Props> = ({ onNext }) => {
             <button className="button" >
           <span className="heart">&hearts;</span> Generate for me <span className="heart">&hearts;</span>
         </button>
+        <button onClick={onNext}>Next</button>
         </div>
     );
 };

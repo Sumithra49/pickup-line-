@@ -3,7 +3,11 @@ import { useState } from 'react';
 import { supabase } from '../pages/supabaseClient'; // Adjust the path as necessary
 import './Page2.css';
 
-export default function Page2() {
+interface Page2Props {
+  onNext: () => void;
+}
+
+const Page2: React.FC<Page2Props> = ({ onNext }) => {
   const [isGoogleSignupClicked, setIsGoogleSignupClicked] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -49,6 +53,9 @@ export default function Page2() {
           By signing up, you agree to the terms of use, Privacy Notice
         </p>
       </footer>
+      <button onClick={onNext}>Next</button>
     </div>
+    
   );
 }
+export default Page2;
