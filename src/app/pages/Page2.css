@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 100vh; */
+    margin-top: 100px;
+    
+  }
+  
+  .heart-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 20px;
+    background-color: rgb(255, 33, 87);
+   
+    
+    height: 40px;
+    width: 40px; 
+    border-radius: 10%; 
+  }
+  
+  .heart {
+    font-size: 30px;
+    color: white;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .google-button {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .google-button .google-icon {
+    width: 20px; /* Adjust icon size as needed */
+    margin-right: 10px;
+  }
+  
